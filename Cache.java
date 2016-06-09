@@ -10,7 +10,7 @@ public class Cache {
 	public static String tail = null;
 	public static String head = null;
 
-	public static void main(String[] args) {
+	public Cache {
 		cache = new HashMap<String, PageInfo>(CACHE_SIZE);
 		PageInfo dummy_head = new PageInfo("dummy_head", new Object());
 		cache.put("dummy_head", dummy_head);
