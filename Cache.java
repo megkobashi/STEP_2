@@ -13,13 +13,13 @@ public class Cache {
 	public Cache {
 		cache = new HashMap<String, PageInfo>(CACHE_SIZE);
 		PageInfo dummy_head = new PageInfo("dummy_head", new Object());
-		cache.put("dummy_head", dummy_head);
 		PageInfo dummy_tail = new PageInfo("dummy_tail", new Object());
+		cache.put("dummy_head", dummy_head);
+		cache.put("dummy_tail", dummy_tail);
 		dummy_tail.setNewer(dummy_head);
+		dummy_head.setOlder(dummy_tail);
 		head = "dummy_head";
 		tail = "dummy_tail";
-		cache.put("dummy_tail", dummy_tail);
-		dummy_head.setOlder(dummy_tail);
 	}
 
 	public void add(String url, Object page) {
